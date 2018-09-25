@@ -24,11 +24,11 @@ def get_response(url):
 def scrape_urls(string):
     '''Returns a sorted string of urls'''
     matches = sorted(set(re.findall(
-        (r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|'
+        (r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-&(-_@.&+]|[!*\(\),]|'
          r'(?:%[0-9a-fA-F][0-9a-fA-F]))+'), string
     )))
     return '\n'.join(matches)
-#
+
 
 def scrape_emails(string):
     '''Returns sorted string of emails'''
